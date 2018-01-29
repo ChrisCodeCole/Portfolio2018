@@ -1,0 +1,36 @@
+$dark-navy: #1E1E2D;
+$dark-blue: #121F49;
+$blue: #0047ED;
+$grey: #808D8E;
+
+$p-font: 'Cormorant Infant', serif;
+$s-font: 'Lato', sans-serif;
+body{
+  margin: 0 auto;
+}
+
+ul {
+  position: fixed;
+  background-color: $grey;
+  opacity: 0.36;
+  list-style: none;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  float: right;
+    li:first-child{
+      float: left;
+    }
+    li{
+      float: right;
+
+      a{
+        display: block;
+        padding: 10px;
+        text-decoration: none;
+        &:hover{
+          background-color: #111;
+        }
+      }
+    }
+}
