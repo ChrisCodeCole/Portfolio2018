@@ -1,24 +1,59 @@
+/*
+COLORS
+*/
+/*
+FONTS
+*/
 body {
   margin: 0 auto; }
 
-ul {
+/*
+NAVBAR 
+*/
+.topnav {
   position: fixed;
   background-color: #808D8E;
-  opacity: 0.36;
-  list-style: none;
+  opacity: 0.8;
   width: 100%;
   margin: 0;
-  padding: 0;
-  float: right; }
-  ul li:first-child {
-    float: left; }
-  ul li {
+  padding: 0; }
+  .topnav a {
+    float: left;
+    padding: 1rem 1.5rem;
+    text-decoration: none;
+    text-align: center;
+    font-family: "Lato", sans-serif; }
+    .topnav a:hover {
+      background-color: rgba(20, 20, 20, 0.3);
+      color: #0047ed; }
+  .topnav .topnav-right {
     float: right; }
-    ul li a {
-      display: block;
-      padding: 10px;
-      text-decoration: none; }
-      ul li a:hover {
-        background-color: #111; }
+
+/*
+GRID - MY BACKGROUND
+*/
+#my-background {
+  display: grid;
+  grid-template-rows: 1.75fr 1.25fr 0.75fr 1.25fr;
+  grid-template-columns: 0.5fr 4.5fr;
+  grid-template-areas: "txt txt txt txt txt" "rect1 c1 c1 c1 c1" ". . line . ." "rect2 c2 c2 c2 c2" ". . line2 . ."; }
+  #my-background h2 {
+    grid-area: txt;
+    justify-self: center;
+    align-self: center; }
+  #my-background #rect1 {
+    grid-area: rect1;
+    justify-self: center;
+    align-self: center; }
+  #my-background #card1 {
+    grid-area: c1;
+    margin-right: 5em; }
+  #my-background #rect2 {
+    grid-area: rect2;
+    justify-self: center;
+    align-self: center; }
+  #my-background #card2 {
+    grid-area: c2;
+    margin-right: 5em; }
 
 /*# sourceMappingURL=style.css.map */
