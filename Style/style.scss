@@ -4,6 +4,8 @@ $dark-blue: #121F49;
 $blue: #0047ed;
 $grey: #808D8E;
 
+
+
 /**FONTS**/
 
 $p-font: 'Cormorant Infant', serif; 
@@ -15,7 +17,7 @@ body{
 h2{
   font-family: $p-font;
   letter-spacing: 0.2em;
-  font-size: 2em;
+  font-size: 3em;
 }
 
 html{
@@ -60,143 +62,159 @@ BACKGROUND IMAGE(w3school style)
 }
 */
 
-/**GRID - MY INTRO**/
-// #my-intro-container{
-//   overflow: hidden;
-//   height: 40em;
-//   border: 10px solid purple;
-// }
+/*************
+
+GRID - INTRO IMAGE
+
+**************/
+
 #my-intro{
-  // height: 200%;
-  // width: 100%;
-  // background:url("Images/test.JPG") no-repeat center;
-  // margin: auto;
-  // display: table;
-  // background-size: cover;
-  // border: 10px solid red;
-  // .inner{
-  //   display: table-cell;
-  background: url(Images/test2.jpg) no-repeat center center;
-  -webkit-background-size: 100%;
-  -moz-background-size: 100%;
-  -o-background-size: 100%;
-  background-size: 100%;
+
+  background: url(Images/laptop1.jpg) no-repeat scroll center center;
   background-size: cover;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   overflow: hidden;
   width: 100%;
+  min-height: 100%;
   margin: 0;
-  position: relative;
-  height: 80em;
+  display: block;
+  height: 50em;
+  z-index: -1;
 
-  h1, h3{
-    font-family: $p-font;
-  }
-  blockquote{
-    font-family: $s-font;
-  }
 }
-  
-//}
+
+// .color{
+//   background-color: rgba(0,71,237,0.1);
+//   width:100%;
+//   height:50em;
+//   z-index: 1;
+// }
 
 
 
-/**GRID - MY BACKGROUND**/
+
+/**************
+
+GRID - MY BACKGROUND
+
+******************/
 
 #my-background{
+  overflow: hidden;
+  background-color: $dark-blue;
+  margin-bottom: 0;
   display: grid;
-  grid-template-rows: 1.75fr 1.25fr 0.75fr 1.25fr;
-  grid-template-columns: 0.5fr 4.5fr;
   grid-template-areas: 
     "txt txt txt txt txt"
-    "rect1 c1 c1 c1 c1"
-    ". . line . ."
-    "rect2 c2 c2 c2 c2"
-    ". . line2 . .";
+    "bg-image c1 c1 c1 c1"
+    "bg-left c2 c2 c2 c2";
+
     h2{
       grid-area: txt;
-      justify-self: center;
-      align-self: center;
+      margin: 3em auto;
     }
+
 
     p{
       font-family: $s-font;
+      width: 75%;
+      margin: 0 auto;
+      line-height: 1.5em;
+      color: #CCDAD1;
     }
 
     #card1{
+      grid-area: c1;
       background: $dark-navy;
-      border-radius: 0.2em;
-      box-shadow: 0 0.4em 0 -.1em rgba(0,0,0,0.5);
-
-    }
-
-    #top-card1{
-      // border-bottom: 80px solid transparent;
-      // border-right: 200px solid rgba(128,141,142,0.2);
-     
-      
-    }
-
-    #bot-card1{
-      
-      // border-top: 80px solid transparent;
-      // border-left: 200px solid rgba(30,30,45,0.2);
-      
-      p{
-        
-      }
+      border-radius: 0.4em;
+      border: 1px solid rgb(0,71,237);
+      margin: 2em auto;
+      width: 60%;
+      padding: 3em;
     }
 
     #card2{
+      grid-area: c2;
       background: $dark-navy;
-      border-radius: 0.2em;
-      box-shadow: 0 0.4em 0 -.1em rgba(0,0,0,0.5);
-      
+      border-radius: 0.4em;
+      border: 1px solid rgb(0,71,237);
+      margin-top: 2em;
+      margin-left: auto;
+      margin-right: auto;
+      width: 60%;
+      padding: 3em;
     }
 
     .card-text{
-      color: white;
+      color: #CCDAD1;
       padding: 1em;
      
     }
-    #rect1{
-      grid-area: rect1;
-      justify-self: center;
-      align-self: center;
+  
+    .name-and-title{
+      font-family: $p-font;
+      color: #CCDAD1;
+      font-size: 1.3em;
+      text-align: center;
     }
-    #card1{ 
-      grid-area: c1;
-      margin-right: 5em; 
-    }
-    #rect2{
-      grid-area: rect2;
-      justify-self: center;
-      align-self: center;
-    }
-    #card2{
-      grid-area: c2;
-      margin-right: 5em; 
+  
+    blockquote{
+      font-family: $s-font;
+      color: #CCDAD1;
+      text-align: center;
     }
 
+    img{
+      grid-area: bg-image;
+      margin-left: 2em;
+      max-width: 100%;
+      max-height: 100%;
+      background-color: $dark-navy;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0
+       rgba(0, 0, 0, 0.5);
+    }
+    .BG-left-column{
+      grid-area: bg-left;
+      margin-left: 2em;
+      background-color: $dark-navy;
+      box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0
+       rgba(0, 0, 0, 0.5);
+      width: 100%;
+    }
 }
 
+/***********
+
+ - MY SKILLS
+
+ **************/
+
+
+
+ #my-skills{
+   margin: 0;
+   overflow: hidden;
+ }
+
 /***********GRID
- - MY WORK
+ 
+- MY WORK
+
  **************/
 #my-work{
-  background: $grey;
+  background: $dark-blue;
   position: relative;
   height: 60em;
-  margin-top: 10em;
-
+  overflow: hidden;
   h2{
     text-align: center;
-    padding-top: 3em;
+    padding: 3em;
   }
 }
 #my-work-grid{
+  margin-top: 6em;
   height: 35em;
   display: grid;
   grid-template-columns: repeat(17, 1fr);
@@ -260,21 +278,27 @@ BACKGROUND IMAGE(w3school style)
   }
 }
 
-/** CONTACT FORM **/
+/**************
+
+ CONTACT FORM
+
+ *************/
 
 #contact{
   display: inline-block;
-  background: $dark-blue;
+  background: $grey;
   width: 100%;
-  height: 50em;
+  height: 65em;
+  overflow: hidden;
   
   hr{
-    border-color: $grey;
-    background-color: $grey;
+    border-color: $blue;
+    background-color: $blue;
   }
   h2{
     text-align: center;
     padding-top: 2em;
+    margin-bottom: 2.5em;
   }
 }
   #contact{
@@ -315,14 +339,14 @@ BACKGROUND IMAGE(w3school style)
       background-color: $dark-navy;
       border: 1px solid $grey;
       height: 3em;
-      font-weight: bold;
-      color: $grey;
+      color: #CCDAD1;
       padding: 1em;
+      font-size: 0.9em;
 
       &::-webkit-input-placeholder,
       &::placeholder{
         color: $grey;
-        opacity: 0.3;
+        opacity: 0.8;
         text-align: center;
       }
       &:focus{
@@ -331,10 +355,16 @@ BACKGROUND IMAGE(w3school style)
 
       &[type=submit]{
         grid-area: button;
-        background-color: $grey;
-        border: 1px solid lightgrey;
-        height: 3.5em;
-        color: #000;
+        background-color: $dark-blue;
+        border-radius: 1em;
+        height: 2.5em;
+        color: #CCDAD1;
+        font-size: 1.2em;
+        padding: 0.5em;
+        width: 50%;
+        margin-bottom: 7em;
+        justify-self: end;
+        letter-spacing: 0.1em;
       }
     }
   }
@@ -354,19 +384,25 @@ BACKGROUND IMAGE(w3school style)
   #message{
     grid-area: message;
     background-color: $dark-navy;
-    border: 1px solid $grey;
+    border: 1px solid $blue;
     height: 20em;
     resize: none;
+    color: #CCDAD1;
+    font-size: 1.3em;
 
     &::-webkit-input-placeholder,
     &::placeholder{
       color: $grey;
-      opacity: 0.3;
+      opacity: 0.8;
     }
   }
 
 
-/** SOCIAL LINKS**/
+/************
+
+ SOCIAL LINKS
+
+ ***********/
 
 #left-column{
   position: absolute;
@@ -390,19 +426,19 @@ BACKGROUND IMAGE(w3school style)
     grid-area: 2 / 1 / 3 / 2;
     display: inline-block;
     margin-left: 0.7em;
-    color: white;
+    color: #CCDAD1;
   }
   #icon2{
     grid-area: 2 / 2 / 3 / 3;
     display: inline-block;
     margin-left: 0.4em;
-    color: white;
+    color: #CCDAD1;
   }
   #icon3{
     grid-area: 2 / 3 / 3 / 4;
     display: inline-block;
     margin-left: 0.4em;
-    color: white;
+    color: #CCDAD1;
   } 
 
 }
