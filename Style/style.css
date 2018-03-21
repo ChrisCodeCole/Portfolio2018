@@ -6,7 +6,8 @@ body {
 h2 {
   font-family: "Cormorant Infant", serif;
   letter-spacing: 0.2em;
-  font-size: 3em; }
+  font-size: 3em;
+  color: #808D8E; }
 
 html {
   box-sizing: border-box; }
@@ -28,7 +29,8 @@ html {
     padding: 1rem 1.5rem;
     text-decoration: none;
     text-align: center;
-    font-family: "Lato", sans-serif; }
+    font-family: "Lato", sans-serif;
+    color: #808D8E; }
     .topnav a:hover {
       background-color: rgba(20, 20, 20, 0.3);
       color: #0047ed; }
@@ -73,13 +75,13 @@ GRID - MY BACKGROUND
   background-color: #121F49;
   margin-bottom: 0;
   display: grid;
-  grid-template-areas: "txt txt txt txt txt" "bg-image c1 c1 c1 c1" "bg-left c2 c2 c2 c2"; }
+  grid-template-areas: "txt txt txt txt txt" "bg-left c1 c1 c1 c1" "bg-left c2 c2 c2 c2"; }
   #my-background h2 {
     grid-area: txt;
     margin: 3em auto; }
   #my-background p {
     font-family: "Lato", sans-serif;
-    width: 75%;
+    width: 90%;
     margin: 0 auto;
     line-height: 1.5em;
     color: #CCDAD1; }
@@ -90,7 +92,11 @@ GRID - MY BACKGROUND
     border: 1px solid #0047ed;
     margin: 2em auto;
     width: 60%;
-    padding: 3em; }
+    padding: 1em; }
+    @media only screen and (max-width: 650px) {
+      #my-background #card1 {
+        width: 95%;
+        padding: 0.3em; } }
   #my-background #card2 {
     grid-area: c2;
     background: #1E1E2D;
@@ -100,7 +106,11 @@ GRID - MY BACKGROUND
     margin-left: auto;
     margin-right: auto;
     width: 60%;
-    padding: 3em; }
+    padding: 1em; }
+    @media only screen and (max-width: 650px) {
+      #my-background #card2 {
+        width: 95%;
+        padding: 0.3em; } }
   #my-background .card-text {
     color: #CCDAD1;
     padding: 1em; }
@@ -114,18 +124,38 @@ GRID - MY BACKGROUND
     color: #CCDAD1;
     text-align: center; }
   #my-background img {
-    grid-area: bg-image;
-    margin-left: 2em;
     max-width: 100%;
-    max-height: 100%;
-    background-color: #1E1E2D;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.5); }
+    max-height: 100%; }
   #my-background .BG-left-column {
     grid-area: bg-left;
+    display: flex;
+    flex-direction: column;
     margin-left: 2em;
     background-color: #1E1E2D;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.5);
-    width: 100%; }
+    width: 100%;
+    max-height: 99%; }
+    @media only screen and (max-width: 1100px) {
+      #my-background .BG-left-column {
+        max-height: 90%; } }
+    @media only screen and (max-width: 1000px) {
+      #my-background .BG-left-column {
+        max-height: 80%; } }
+  @media only screen and (max-width: 950px) {
+    #my-background {
+      grid-template-areas: "txt txt" "bg-left bg-left" "c1 c1" "c2 c2"; }
+      #my-background .name-and-title {
+        background-color: #1E1E2D;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.5); }
+      #my-background img {
+        width: 100%;
+        height: auto; }
+      #my-background .BG-left-column {
+        margin-left: 0;
+        box-shadow: initial;
+        background-color: initial; }
+      #my-background blockquote {
+        margin-bottom: 2em; } }
 
 /***********
 
@@ -138,7 +168,7 @@ GRID - MY BACKGROUND
 
 /***********GRID
  
-- MY WORK
+- MY PROJECTS
 
  **************/
 #my-work {
@@ -148,53 +178,159 @@ GRID - MY BACKGROUND
   overflow: hidden; }
   #my-work h2 {
     text-align: center;
-    padding: 3em; }
+    padding: 2em; }
+    @media only screen and (max-width: 375px) {
+      #my-work h2 {
+        padding: 1em; } }
 
-#my-work-grid {
-  margin-top: 6em;
-  height: 35em;
-  display: grid;
-  grid-template-columns: repeat(17, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  width: 80%;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%); }
-  #my-work-grid .img-card {
-    background: #fff;
-    box-shadow: 0 0.8em 0 -0.3em rgba(255, 255, 255, 0.5), 0 1.6em 0 -0.6em rgba(255, 255, 255, 0.3); }
-  #my-work-grid .project1 {
-    grid-area: 1 / 1 / span 4 / span 4;
-    border: 1px solid red;
-    z-index: 1; }
-  #my-work-grid .project2 {
-    grid-area: 1 / 14 / span 4 / span 4;
-    border: 1px solid blue;
-    z-index: 2; }
-  #my-work-grid .project3 {
-    grid-area: 2 / 3 / span 5 / span 5;
-    border: 1px solid green;
-    z-index: 2; }
-  #my-work-grid .project4 {
-    grid-area: 2 / 11 / span 5 / span 5;
-    border: 1px solid black;
-    z-index: 3; }
-  #my-work-grid .project5 {
-    grid-area: 3 / 6 / span 7 / span 7;
-    border: 1px solid purple;
-    z-index: 3; }
+@media only screen and (min-width: 851px) {
+  #my-work-grid {
+    margin-top: 6em;
+    height: 35em;
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 80%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); }
+    #my-work-grid .img-card {
+      background: #fff;
+      box-shadow: 0 0.8em 0 -0.3em rgba(255, 255, 255, 0.5), 0 1.6em 0 -0.6em rgba(255, 255, 255, 0.3); }
+    #my-work-grid .project1 {
+      grid-area: 1 / 1 / span 4 / span 4;
+      border: 1px solid red;
+      z-index: 1; }
+    #my-work-grid .project2 {
+      grid-area: 1 / 14 / span 4 / span 4;
+      border: 1px solid blue;
+      z-index: 2; }
+    #my-work-grid .project3 {
+      grid-area: 2 / 3 / span 5 / span 5;
+      border: 1px solid green;
+      z-index: 2; }
+    #my-work-grid .project4 {
+      grid-area: 2 / 11 / span 5 / span 5;
+      border: 1px solid black;
+      z-index: 3; }
+    #my-work-grid .project5 {
+      grid-area: 3 / 6 / span 7 / span 7;
+      border: 1px solid purple;
+      z-index: 3; }
+    #my-work-grid .left-arrow {
+      position: absolute;
+      top: 60%;
+      left: 20%;
+      z-index: 6; }
+    #my-work-grid .right-arrow {
+      position: absolute;
+      top: 60%;
+      left: 80%;
+      z-index: 6; } }
+@media only screen and (min-width: 751px) and (max-width: 850px) {
+  #my-work-grid {
+    margin-top: 6em;
+    height: 35em;
+    display: grid;
+    grid-template-columns: repeat(17, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+    width: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%); }
+    #my-work-grid .img-card {
+      background: #fff;
+      box-shadow: 0 0.8em 0 -0.3em rgba(255, 255, 255, 0.5), 0 1.6em 0 -0.6em rgba(255, 255, 255, 0.3); }
+    #my-work-grid .project1 {
+      grid-area: 1 / 1 / span 4 / span 4;
+      border: 1px solid red;
+      z-index: 1; }
+    #my-work-grid .project2 {
+      grid-area: 1 / 14 / span 4 / span 4;
+      border: 1px solid blue;
+      z-index: 2; }
+    #my-work-grid .project3 {
+      grid-area: 2 / 3 / span 5 / span 5;
+      border: 1px solid green;
+      z-index: 2; }
+    #my-work-grid .project4 {
+      grid-area: 2 / 11 / span 5 / span 5;
+      border: 1px solid black;
+      z-index: 3; }
+    #my-work-grid .project5 {
+      grid-area: 3 / 6 / span 7 / span 7;
+      border: 1px solid purple;
+      z-index: 3; }
+    #my-work-grid .left-arrow {
+      position: absolute;
+      top: 60%;
+      left: 20%;
+      z-index: 6; }
+    #my-work-grid .right-arrow {
+      position: absolute;
+      top: 60%;
+      left: 80%;
+      z-index: 6; } }
+@media only screen and (max-width: 750px) {
+  #my-work-grid {
+    margin-top: 2em;
+    height: 25em; }
+    #my-work-grid .img-card {
+      background: #fff;
+      box-shadow: 0 0.8em 0 -0.3em rgba(255, 255, 255, 0.5); }
+    #my-work-grid .project1 {
+      border: 1px solid red;
+      z-index: 1;
+      display: none; }
+    #my-work-grid .project2 {
+      border: 1px solid blue;
+      z-index: 2;
+      display: none; }
+    #my-work-grid .project3 {
+      border: 1px solid green;
+      z-index: 2;
+      display: none; }
+    #my-work-grid .project4 {
+      border: 1px solid black;
+      z-index: 3;
+      display: none; }
+    #my-work-grid .project5 {
+      border: 1px solid purple;
+      z-index: 3;
+      height: 25em;
+      text-align: center;
+      margin: 0 auto;
+      width: 90%; }
+    #my-work-grid .left-arrow {
+      position: absolute;
+      top: 50%;
+      left: 10%;
+      z-index: 6; }
+    #my-work-grid .right-arrow {
+      position: absolute;
+      top: 50%;
+      right: 10%;
+      z-index: 6; } }
+@media only screen and (max-width: 438px) {
   #my-work-grid .left-arrow {
     position: absolute;
     top: 60%;
-    left: 20%;
+    left: 10%;
     z-index: 6; }
   #my-work-grid .right-arrow {
     position: absolute;
     top: 60%;
-    left: 80%;
-    z-index: 6; }
+    right: 10%;
+    z-index: 6; } }
+@media only screen and (max-width: 375px) {
+  #my-work-grid .left-arrow {
+    display: none; }
+  #my-work-grid .right-arrow {
+    display: none; } }
 
 /**************
 
@@ -207,13 +343,20 @@ GRID - MY BACKGROUND
   width: 100%;
   height: 65em;
   overflow: hidden; }
-  #contact hr {
-    border-color: #0047ed;
-    background-color: #0047ed; }
+  @media only screen and (max-width: 400px) {
+    #contact {
+      height: 70em; } }
   #contact h2 {
     text-align: center;
     padding-top: 2em;
-    margin-bottom: 2.5em; }
+    margin-bottom: 2.5em;
+    color: black; }
+    @media only screen and (max-width: 400px) {
+      #contact h2 {
+        margin-bottom: 1.5em; } }
+  @media only screen and (max-width: 400px) {
+    #contact span {
+      display: block; } }
 
 #contact {
   position: relative; }
@@ -230,13 +373,19 @@ GRID - MY BACKGROUND
   margin: 0 auto;
   position: absolute;
   left: 25%; }
+  @media only screen and (max-width: 650px) {
+    #form-container {
+      left: 10%; } }
 
 #contact-form {
   display: grid;
   grid-template-areas: "name e-mail" "number ." "subject ." "message message" "message message" ".       button";
   grid-gap: 2em 20%;
-  text-align: center;
-  margin-bottom: 0; }
+  text-align: center; }
+  @media only screen and (max-width: 650px) {
+    #contact-form {
+      grid-template-areas: "name name" "e-mail e-mail" "number number" "subject subject" "message message" "button button";
+      width: 160%; } }
   #contact-form input {
     background-color: #1E1E2D;
     border: 1px solid #808D8E;
@@ -299,8 +448,14 @@ GRID - MY BACKGROUND
   display: grid;
   grid-template-columns: repeat(3, 0.2fr);
   grid-template-rows: repeat(2, 1fr);
-  grid-gap: 2em 0;
-  width: 100px 50px; }
+  grid-gap: 2em 2em;
+  width: 10em; }
+  @media only screen and (max-width: 950px) {
+    #left-column {
+      top: 85%; } }
+  @media only screen and (max-width: 650px) {
+    #left-column {
+      display: none; } }
   #left-column span {
     background-color: rgba(169, 169, 194, 0.3);
     grid-area: 1 / 1 / 2 / 4;
@@ -324,5 +479,55 @@ GRID - MY BACKGROUND
     display: inline-block;
     margin-left: 0.4em;
     color: #CCDAD1; }
+
+/***********
+
+Media Queries(will update and place all media queries towards bottom)
+
+************/
+/**NAVBAR**/
+@media only screen and (min-width: 601px) {
+  .sandwhich-menu {
+    display: none; } }
+@media only screen and (max-width: 600px) {
+  .topnav {
+    float: left;
+    background-color: initial;
+    opacity: 1; }
+    .topnav .topnav-right {
+      float: left;
+      display: none; }
+      .topnav .topnav-right a {
+        float: initial;
+        display: block;
+        padding: 1.4rem 1.5rem;
+        background-color: rgba(0, 0, 0, 0.8);
+        border: 1px solid blue;
+        color: #808D8E; }
+
+  .menu-container {
+    float: left;
+    width: 6em;
+    background-color: #000;
+    text-align: center;
+    height: 4em;
+    opacity: 0.6; }
+    .menu-container:focus {
+      opacity: 0.8; }
+
+  .sandwhich-menu {
+    color: #808D8E;
+    font-size: 4em;
+    padding: 0.3em;
+    opacity: 0.9; } }
+@media only screen and (max-width: 375px) {
+  .mobile-span {
+    color: #CCDAD1;
+    display: block;
+    text-align: center;
+    margin-top: 2em; } }
+@media only screen and (min-width: 376px) {
+  .mobile-span {
+    display: none; } }
 
 /*# sourceMappingURL=style.css.map */
