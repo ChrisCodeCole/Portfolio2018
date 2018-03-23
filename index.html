@@ -16,7 +16,7 @@
       <nav>
         <div class="topnav">
           <div class="menu-container">
-            <i class="fas fa-bars sandwhich-menu"></i>
+            <i class="fas fa-bars sandwich-menu"></i>
           </div>
           <div class="topnav-right show">
             <a href="#my-background">About</a>
@@ -45,7 +45,7 @@
           </p>
         </div>
         <div class="BG-left-column">
-            <img src="Style/Images/test2.jpg" alt="My photo">
+            <img class="test" src="Style/Images/test2.jpg" alt="My photo">
             <div class="name-and-title"> 
               <h1 id="name-intro">Christian Coleman</h1>
               <h3>Web Developer</h3>
@@ -70,27 +70,32 @@
       -->
       <section id="my-work">
         <h2>My Projects</h2>
-        <div id="my-work-grid">
+        <div id="my-work-grid" class="work-grid">
           <div class="img-card project1">
-            <img src="#" alt="">
-            <span class="img-desc">Lorem ipsum dolor sit amet.</span>
+            <div class="project-overlay">
+              <span class="img-desc">My bomb ass first website</span>
+            </div>
           </div>
           <div class="img-card project2">
-            <img src="#" alt="">
-            <span class="img-desc">Lorem ipsum dolor sit amet.</span>
+            <div class="project-overlay">
+              <span class="img-desc">Another fantastic website</span>
+            </div>
           </div>
           <div class="img-card project3">
-            <img src="#" alt="">
-            <span class="img-desc">Lorem ipsum dolor sit amet.</span>
+            <div class="project-overlay">
+              <span class="img-desc">Codepen stuff</span>
+            </div>
           </div>
           <div class="img-card project4">
-            <img src="#" alt="">
-            <span class="img-desc">Lorem ipsum dolor sit amet.</span>
+            <div class="project-overlay">
+            <span class="img-desc">Testers</span>
+            </div>
           </div>
           <i class="fas fa-arrow-alt-circle-left fa-2x  left-arrow"></i>
           <div class="img-card project5">
-            <img src="#" alt=""> 
-            <span class="img-desc">Lorem ipsum dolor sit amet.</span>
+            <div class="project-overlay">
+              <span class="img-desc">Freecodecamp Projects</span>
+            </div>
           </div>
           <i class="fas fa-arrow-alt-circle-right fa-2x right-arrow"></i>
       </div>
@@ -115,7 +120,7 @@
             <input id="e-mail" type="text" name="email" placeholder="E-mail (Required)" required maxlength="40">
             <input id="number" type="text" name="phonenumber" placeholder="Phone Number" maxlength="16">
             <input id="subject" type="text" name="subject" placeholder="Subject" maxlength="40">
-            <textarea id="message" type="text" name="message" placeholder="Message.." maxlength="300"></textarea>
+            <textarea id="message" type="text" name="message" placeholder="Message.." required maxlength="300"></textarea>
             <input id="submit" type="submit" value="SEND">
           </form>
         </div>
@@ -123,6 +128,6 @@
     </footer>
   </div>
 
-
+  <script src="JS/app.js"></script>
 </body>
 </html>
