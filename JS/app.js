@@ -85,7 +85,17 @@ if(window.matchMedia("(min-width: 750px)").matches) {
           break;
         }
         bgImages[i] = bgImages[i + 1];
-      }       
+      }
+
+      //CSS Fade effect
+      projects[0].classList.add("fade-in"); 
+      projects[1].classList.add("fade-inMain")
+      projects[2].classList.add("fade-in");
+      setTimeout(function(){
+        projects[0].classList.remove("fade-in");
+        projects[1].classList.remove("fade-inMain")
+        projects[2].classList.remove("fade-in");
+      }, 1000);         
     }
 
 
@@ -110,17 +120,40 @@ if(window.matchMedia("(min-width: 750px)").matches) {
           break;
         }
         bgImages[i] = bgImages[i - 1];
-      }       
-    }
+      }
 
-    projects[0].classList.add("fade-in");
-    projects[1].classList.add("fade-inMain")
-    projects[2].classList.add("fade-in");
-    //Remove fade class
-    setTimeout(function(){
-      projects[0].classList.remove("fade-in");
-      projects[1].classList.remove("fade-inMain")
-      projects[2].classList.remove("fade-in");
-    }, 1000);
+      //CSS Fade effect
+      projects[0].classList.add("fade-in");
+      projects[1].classList.add("fade-inMain")
+      projects[2].classList.add("fade-in");
+      setTimeout(function(){
+        projects[0].classList.remove("fade-in");
+        projects[1].classList.remove("fade-inMain")
+        projects[2].classList.remove("fade-in");
+      }, 1000);       
+    }
   }
 }
+
+//Prevent default on form and submit animation
+document.querySelector('#contact-form').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  var submitAlert = document.querySelector('#submit-alert');
+  var alertMsg = document.querySelector("#alert-msg");
+
+  submitAlert.style.visibility = "initial";
+  submitAlert.classList.add("submitFade");
+
+  setTimeout(function(){
+    alertMsg.classList.add("fade-inMain");
+    alertMsg.style.display = "initial";
+  }, 2000);
+  setTimeout(function(){
+    submitAlert.classList.remove("submitFade");
+    submitAlert.style.visibility = "hidden";
+    alertMsg.classList.remove("fade-inMain");
+    alertMsg.style.display = "none";
+  }, 5000);
+
+});

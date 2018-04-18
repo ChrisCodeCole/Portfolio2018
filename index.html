@@ -107,6 +107,9 @@
     <footer>
       <section id="contact">
         <h2>Contact <span>Me</span></h2>
+        <div id="submit-alert">
+          <span id="alert-msg">Thank you for your submission.</span>
+        </div>
         <!-- <hr> -->
         <div id="left-column">
           <span>Also, find me here!</span>
@@ -115,7 +118,7 @@
             <i id="icon3" class="fab fa-github fa-2x"></i>
         </div>
         <div id="form-container">
-          <form id="contact-form">
+          <form id="contact-form" action="https://formspree.io/christian.c2508@gmail.com" method="POST">
             <input id="name" type="text" name="name" placeholder="Name (Required)" required maxlength="30">
             <input id="e-mail" type="text" name="email" placeholder="E-mail (Required)" required maxlength="40">
             <input id="number" type="text" name="phonenumber" placeholder="Phone Number" maxlength="16">

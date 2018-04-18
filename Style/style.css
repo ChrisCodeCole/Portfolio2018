@@ -188,8 +188,9 @@ GRID - MY BACKGROUND
   margin-top: 2em;
   height: 25em; }
   #my-work-grid .img-card {
+    border: 1px solid blue;
     background: #fff;
-    box-shadow: 0 0.8em 0 -0.3em rgba(255, 255, 255, 0.5);
+    box-shadow: 0.3em 0.3em 0 -0.1em rgba(100, 100, 100, 0.5);
     text-align: center; }
     #my-work-grid .img-card .project-overlay {
       display: inline-block; }
@@ -197,7 +198,6 @@ GRID - MY BACKGROUND
         width: 90%;
         display: none; }
   #my-work-grid .project1 {
-    border: 1px solid red;
     display: none;
     background: url(Images/website1.jpg) no-repeat scroll center center/cover;
     background-size: cover;
@@ -216,7 +216,6 @@ GRID - MY BACKGROUND
     -moz-background-size: cover;
     -o-background-size: cover; }
   #my-work-grid .project3 {
-    border: 1px solid blue;
     display: none;
     background: url(Images/website3.jpg) no-repeat scroll center center/cover;
     background-size: cover;
@@ -224,12 +223,10 @@ GRID - MY BACKGROUND
     -moz-background-size: cover;
     -o-background-size: cover; }
   #my-work-grid .project4 {
-    border: 1px solid black;
     z-index: 3;
     display: none;
     background: url(Images/website4.jpg) no-repeat scroll center center/cover; }
   #my-work-grid .project5 {
-    border: 1px solid green;
     z-index: 2;
     display: none;
     background: url(Images/website5.jpg) no-repeat scroll center center/cover; }
@@ -279,14 +276,30 @@ GRID - MY BACKGROUND
   #contact h2 {
     text-align: center;
     padding-top: 2em;
-    margin-bottom: 2.5em;
+    margin-bottom: 2em;
     color: black; }
     @media only screen and (max-width: 400px) {
       #contact h2 {
         margin-bottom: 1.5em; } }
   @media only screen and (max-width: 400px) {
     #contact span {
-      display: block; } }
+      display: block;
+      margin: 0 auto; } }
+  #contact #submit-alert {
+    color: #a8c9ca;
+    border-radius: 1em;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 1em;
+    width: 50%;
+    text-align: center;
+    background-color: rgba(0, 71, 237, 0.8);
+    font-size: 1.3em;
+    padding: 0.2em;
+    height: 1.6em;
+    visibility: hidden; }
+  #contact #alert-msg {
+    display: none; }
 
 #contact {
   position: relative; }
@@ -497,7 +510,7 @@ Animations
 **********/
 @keyframes fadeIn {
   to {
-    opacity: 0.7; } }
+    opacity: 0.8; } }
 .fade-in {
   opacity: 0;
   animation: fadeIn 1s ease-in 1 forwards; }
@@ -508,5 +521,17 @@ Animations
 .fade-inMain {
   opacity: 0;
   animation: fadeInMain 0.75s ease-in 1 forwards; }
+
+@keyframes submitFade {
+  from {
+    width: 0%;
+    background-color: #808D8E;
+    opacity: 0%; }
+  to {
+    width: 50%;
+    background-color: rgba(0, 71, 237, 0.8);
+    opacity: 100%; } }
+.submitFade {
+  animation: submitFade 3s ease-in; }
 
 /*# sourceMappingURL=style.css.map */
