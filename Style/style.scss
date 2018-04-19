@@ -102,7 +102,7 @@ GRID - MY BACKGROUND
 
 #my-background{
   overflow: hidden;
-  background-color: $dark-blue;
+  background-color: rgb(214, 217, 224);
   margin-bottom: 0;
   display: grid;
   grid-template-areas: 
@@ -248,7 +248,7 @@ GRID - MY BACKGROUND
 
  **************/
 #my-work{
-  background: $dark-blue;
+  background: rgb(214, 217, 224);
   position: relative;
   height: 60em;
   overflow: hidden;
@@ -283,7 +283,7 @@ GRID - MY BACKGROUND
     
     .project1{
       display: none;
-      background: url(Images/website1.jpg) no-repeat scroll center center / cover;
+      background: url(./Images/website1.jpg) no-repeat scroll center center / cover;
       background-size: cover;
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -296,7 +296,7 @@ GRID - MY BACKGROUND
       text-align: center;
       margin: 0 auto;
       width: 90%;
-      background: url(Images/website2.jpg) no-repeat scroll center center / cover;
+      background: url(./Images/website2.jpg) no-repeat scroll center center / cover;
       background-size: cover;
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -305,7 +305,7 @@ GRID - MY BACKGROUND
 
     .project3{
       display: none;
-      background: url(Images/website3.jpg) no-repeat scroll center center / cover;
+      background: url(./Images/website3.jpg) no-repeat scroll center center / cover;
       background-size: cover;
       -webkit-background-size: cover;
       -moz-background-size: cover;
@@ -315,13 +315,13 @@ GRID - MY BACKGROUND
     .project4{
       z-index: 3;
       display: none;
-      background: url(Images/website4.jpg) no-repeat scroll center center / cover;
+      background: url(./Images/website4.jpg) no-repeat scroll center center / cover;
     }
 
     .project5{
       z-index: 2;
       display: none;
-      background: url(Images/website5.jpg) no-repeat scroll center center / cover;
+      background: url(./Images/website5.jpg) no-repeat scroll center center / cover;
     }
     
     .left-arrow{
@@ -374,7 +374,7 @@ GRID - MY BACKGROUND
 
 #contact{
   display: inline-block;
-  background: $grey;
+  background: rgb(209, 212, 218);
   width: 100%;
   height: 65em;
   overflow: hidden;
@@ -399,17 +399,21 @@ GRID - MY BACKGROUND
   }
 
   #submit-alert{
-    color: rgb(168,201,202);
+    color: rgb(169, 201, 202);
     border-radius: 1em;
     display: block;
+    position: fixed;
+    top: 2.5em;
+    left: 25%;
     margin: 0 auto;
     margin-bottom: 1em;
-    width: 50%;
+    width: 40%;
     text-align: center;
     background-color: rgba(0, 71, 237,0.8);
     font-size: 1.3em;
     padding: 0.2em;
     height: 1.6em;
+    z-index: 9999;
     visibility: hidden;
   }
   #alert-msg{
@@ -561,21 +565,24 @@ GRID - MY BACKGROUND
     grid-area: 2 / 1 / 3 / 2;
     display: inline-block;
     margin-left: 0.7em;
-    color: #CCDAD1;
+    color: #121F49;
   }
   #icon2{
     grid-area: 2 / 2 / 3 / 3;
     display: inline-block;
     margin-left: 0.4em;
-    color: #CCDAD1;
+    color: #121F49;
   }
   #icon3{
     grid-area: 2 / 3 / 3 / 4;
     display: inline-block;
     margin-left: 0.4em;
-    color: #CCDAD1;
+    color: #121F49;
   } 
 
+  .social-links:hover{
+    animation: iconBounce 3s ease-in-out infinite;
+  }
 }
 
 
@@ -721,10 +728,18 @@ Animations
 //Submit form animation
 @keyframes submitFade{
   from {width: 0%; background-color: $grey; opacity: 0%;}
-  to {width: 50%; background-color: rgba(0, 71, 237,0.8); opacity: 100%;}
+  to {width: 40%; background-color: rgba(0, 71, 237,0.8); opacity: 100%;}
 }
 
 .submitFade{
   animation: submitFade 3s ease-in;
+}
+
+//Icons animation
+@keyframes iconBounce{
+  
+  33% {transform: translateY(-0.2em)}
+  66% {transform: translateY(0.2em)}
+  100% {transform: translateY(0px)}
 }
 

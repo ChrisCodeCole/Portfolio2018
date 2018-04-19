@@ -44,7 +44,7 @@ window.onload = function(){
 
 let bgImages = [];
 for(var i = 1; i <= 5; i ++){
-  bgImages.push(`url("Style/Images/website${i}.jpg") no-repeat scroll center center / cover`);
+  bgImages.push(`url("./Style/Images/website${i}.jpg") no-repeat scroll center center / cover`);
   
 }
 console.log(bgImages);
@@ -59,7 +59,7 @@ projects[0].style.background
 
 
 
-// Event for medias below 750px
+// Event for medias above 750px
 if(window.matchMedia("(min-width: 750px)").matches) { 
   document.querySelector("#my-work").addEventListener('click', slideImage);
 
