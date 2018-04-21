@@ -20,6 +20,11 @@ h2{
   font-size: 3em;
   color: $grey;
 }
+p{
+  font-family: $s-font;
+  letter-spacing: 0.05em;
+  font-size: 1.2em;
+}
 
 html{
   box-sizing: border-box;
@@ -131,12 +136,9 @@ GRID - MY BACKGROUND
       border: 1px solid rgb(0,71,237);
       margin: 2em auto;
       width: 60%;
-      padding: 1em;
-      @media only screen and (max-width: 650px){
-        width: 95%;
-        padding: 0.3em;
-       
-      }
+      padding: 3em 1em;
+      height: 80%;
+      
     }
 
     #card2{
@@ -149,16 +151,23 @@ GRID - MY BACKGROUND
       margin-right: auto;
       width: 60%;
       padding: 1em;
+      text-align: center;
       @media only screen and (max-width: 650px){
         width: 95%;
         padding: 0.3em;
        
       }
+        .dev-icons{
+          max-width: 10em;
+          padding: 1em;
+        }
+        .react-icon{
+          fill: #07E8DC;
+        }
     }
 
     .card-text{
       color: #CCDAD1;
-      padding: 1em;
      
     }
   
@@ -403,13 +412,13 @@ GRID - MY BACKGROUND
     border-radius: 1em;
     display: block;
     position: fixed;
-    top: 2.5em;
-    left: 25%;
+    top: 3.5em;
+    left: 30%;
     margin: 0 auto;
     margin-bottom: 1em;
     width: 40%;
     text-align: center;
-    background-color: rgba(0, 71, 237,0.8);
+    background-color: rgba(0, 71, 237,0.9);
     font-size: 1.3em;
     padding: 0.2em;
     height: 1.6em;
@@ -591,11 +600,10 @@ GRID - MY BACKGROUND
 Media Queries(will update and place all media queries towards bottom)
 
 ************/
+
 /**
 NavBar Medias
 **/
-
-
 
 
 @media only screen and (max-width: 600px){
@@ -650,6 +658,37 @@ NavBar Medias
 }
 
 /*
+*Intro Card Medias
+*/
+@media only screen and (max-width: 1200px){
+  #my-background{
+    #card1{
+      padding: 3em 1em 5em 1em;
+    }
+  }
+  
+}
+@media only screen and (max-width: 760px){
+  #my-background{
+    #card1{
+      padding: 3em 1em 5em 1em;
+      width: 95%;
+    }
+  }
+  
+}
+@media only screen and (max-width: 375px){
+  #my-background{
+    #card1{
+      padding: 2em 1em 3em 1em;
+      width: 95%;
+      height: 90%;
+    }
+  }
+  
+}
+
+/*
 *Project Area Medias
 */
 @media only screen and (min-width: 750px){
@@ -690,9 +729,30 @@ NavBar Medias
     margin-top: 2em;
   }
 }
+
+@media only screen and (max-width: 375px){
+  .mobile-span{
+    color: #CCDAD1;
+    display: block;
+    text-align: center;
+    margin-top: 2em;
+  }
+}
 @media only screen and (min-width: 376px){
   .mobile-span{
     display: none;
+  }
+}
+/*
+*Dev Icons Media
+*/
+@media only screen and (max-width: 1250px){
+  #my-background{
+    #card2{
+      .dev-icons{
+        max-width: 7em;
+      }
+    }
   }
 }
 
@@ -728,7 +788,7 @@ Animations
 //Submit form animation
 @keyframes submitFade{
   from {width: 0%; background-color: $grey; opacity: 0%;}
-  to {width: 40%; background-color: rgba(0, 71, 237,0.8); opacity: 100%;}
+  to {width: 40%; background-color: rgba(0, 71, 237,0.9); opacity: 100%;}
 }
 
 .submitFade{
@@ -743,3 +803,31 @@ Animations
   100% {transform: translateY(0px)}
 }
 
+@media only screen and (max-width: 650px){
+  #contact{
+    #submit-alert{
+      left: 10%;
+      width: 80%;
+    }
+  }
+  @keyframes submitFade{
+    from {width: 0%; background-color: $grey; opacity: 0%;}
+    to {width: 80%; background-color: rgba(0, 71, 237,0.9); opacity: 100%;}
+  }
+}
+
+@media only screen and (max-width: 400px){
+  #contact{
+    #submit-alert{
+      left: 5%;
+      top: 50%; 
+      height: 2em;
+      width: 90%;
+      font-size: 1.1em;
+    }
+  }
+  @keyframes submitFade{
+    from {width: 0%; background-color: $grey; opacity: 0%;}
+    to {width: 90%; background-color: rgba(0, 71, 237,0.9); opacity: 100%;}
+  }
+}

@@ -138,10 +138,12 @@ if(window.matchMedia("(min-width: 750px)").matches) {
 //Prevent default on form and submit animation
 document.querySelector('#contact-form').addEventListener('submit', function(e) {
   e.preventDefault();
+  document.querySelector("#contact-form").reset();
 
   var submitAlert = document.querySelector('#submit-alert');
   var alertMsg = document.querySelector("#alert-msg");
 
+  
   submitAlert.style.visibility = "initial";
   submitAlert.classList.add("submitFade");
 
@@ -154,6 +156,7 @@ document.querySelector('#contact-form').addEventListener('submit', function(e) {
     submitAlert.style.visibility = "hidden";
     alertMsg.classList.remove("fade-inMain");
     alertMsg.style.display = "none";
+    
   }, 5000);
 
 });
